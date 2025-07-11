@@ -2,23 +2,25 @@ const email = document.getElementById("email");
 const form = document.getElementById("form");
 const successMessage = document.getElementById("success-message");
 const errorMessage = document.getElementById("error-message");
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function isValidEmail(value) {
+  return emailRegex.test(value);
+}
 
 form.addEventListener("submit", (e) => {
   e.preventDefault(); // Always prevent default form submission
+  errorMessage.innerText = "";
 
-  let messages = [];
-  if (email.value === "" || email.value == null) {
-    messages.push("Email is required.");
-  } 
-
-  // Check if there is a validation error message; if so, display it and stop form submission
-  if (messages.length > 0) {
-    errorMessage.innerText = messages.join(", ");
+  if (!email.value) {
+    errorMessage.innerText = "Email is required.";
     return;
   }
 
-  // If no errors, show success message
+  if (!isValidEmail(email.value)) {
+    errorMessage.innerText = "Valid email required";
+    return;
+  }
   successMessage.style.display = "block";
   form.style.display = "none";
 });

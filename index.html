@@ -20,7 +20,7 @@
   <body>
     <div id="container">
       <!-- Sign-up form start -->
-      <form id="form" action="/" method="post">
+      <form id="form" action="/" method="GET">
         <div class="img-banner">
           <img
             src="./assets/images/illustration-sign-up-mobile.svg"
@@ -48,8 +48,11 @@
         <label for="email">Email address</label>
         <div id="error-message"></div>
         <br />
+
+        <!-- Browsers will block form submission for missing or invalid "@"" symbol before the JavaScript runs, so the custom error messages might not appear.
+So I had to change the input type from "email" to "text" to give me full control over validation and error messages in the script file. -->
         <input
-          type="email"
+          type="text"
           id="email"
           name="email"
           placeholder="email@company.com"
