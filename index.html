@@ -21,15 +21,16 @@
     <div id="container">
       <!-- Sign-up form start -->
       <form id="form" action="/" method="GET">
-        <div class="img-banner">
-          <img
-            src="./assets/images/illustration-sign-up-mobile.svg"
-            alt="Newsletter sign-up illustration"
-            class="hero-image"
-          />
-        </div>
+        <img
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="Newsletter sign-up illustration"
+          class="hero-image"
+        />
+
         <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <p id="cta">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
 
         <ul>
           <li>
@@ -44,21 +45,24 @@
             <img src="./assets/images/icon-list.svg" alt="" />And much more!
           </li>
         </ul>
+        <div id="email-address">
+          <div id="email-headings">
+            <label for="email">Email address</label>
+            <div id="error-message"></div>
+          </div>
+          <br />
 
-        <label for="email">Email address</label>
-        <div id="error-message"></div>
-        <br />
-
-        <!-- Browsers will block form submission for missing or invalid "@"" symbol before the JavaScript runs, so the custom error messages might not appear.
+          <!-- Browsers will block form submission for missing or invalid "@"" symbol before the JavaScript runs, so the custom error messages might not appear.
 So I had to change the input type from "email" to "text" to give me full control over validation and error messages in the script file. -->
-        <input
-          type="text"
-          id="email"
-          name="email"
-          placeholder="email@company.com"
-        />
-        <br />
-        <button type="submit">Subscribe to monthly newsletter</button>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="email@company.com"
+          />
+          <br />
+          <button id="submitBtn" type="submit">Subscribe to monthly newsletter</button>
+        </div>
       </form>
     </div>
     <!-- Sign-up form end -->
