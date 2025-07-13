@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <!-- Success message start -->
+    <div id="success-message">
+      <img
+        src="./assets/images/icon-success.svg"
+        alt="Success icon"
+        class="success-icon"
+      />
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>. Please
+      open it and click the button inside to confirm your subscription.</p>
+      <input
+        id="dismiss-button"
+        type="submit"
+        value="Dismiss message"
+        onclick="window.location.href='index.html'"
+      />
+    </div>
+    <!-- Success message end -->
+  </body>
+</html>

@@ -2,7 +2,7 @@ const email = document.getElementById("email");
 const form = document.getElementById("form");
 const successMessage = document.getElementById("success-message");
 const errorMessage = document.getElementById("error-message");
-const submitBtn = document.getElementById("submitBtn");
+const submitBtn = document.getElementById("submit-button");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function isValidEmail(value) {
@@ -25,8 +25,8 @@ form.addEventListener("submit", (e) => {
     email.style.backgroundColor = "hsla(5, 100%, 95%, 1.00)";
     return;
   }
-  successMessage.style.display = "block";
-  form.style.display = "none";
+// Redirect to success.html if valid
+  window.location.href = "success.html";
 });
 
 email.addEventListener("focus", () => {
