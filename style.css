@@ -7,6 +7,7 @@
 }
 
 body {
+  overflow-y: auto;
   font-family: "Roboto", sans-serif;
   color: hsl(234, 29%, 20%);
   background-color: hsl(235, 18%, 26%);
@@ -26,10 +27,17 @@ p {
   margin: 24px;
 }
 
-.hero-image {
+.illustration-sign-up-mobile {
   display: block;
   width: 100%;
   height: auto; /* preserves aspect ratio */
+}
+.illustration-sign-up-tablet {
+  display: none;
+}
+
+.illustration-sign-up-desktop {
+  display: none;
 }
 
 #email {
@@ -102,7 +110,7 @@ li img {
 }
 
 #success-message > p {
-  margin-bottom: 82px
+  margin-bottom: 82px;
 }
 
 #submit-button,
@@ -123,4 +131,28 @@ li img {
   background: hsl(4, 100%, 67%);
   border: 1.5px solid hsl(4, 98%, 50%);
   box-shadow: 0 6px 16px rgb(241, 160, 149);
+}
+
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+.illustration-sign-up-mobile {
+  display: none;
+  width: 100%;
+  height: auto; /* preserves aspect ratio */
+}
+.illustration-sign-up-tablet {
+  display: block;
+}
+
+.illustration-sign-up-desktop {
+  display: none;
+}
+
+#top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
 }
