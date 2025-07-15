@@ -133,26 +133,94 @@ li img {
   box-shadow: 0 6px 16px rgb(241, 160, 149);
 }
 
+#submit-button:focus,
+#dismiss-button:focus {
+  background: hsl(4, 100%, 67%);
+  border: 1.5px solid hsl(4, 98%, 50%);
+  box-shadow: 0 6px 16px rgb(241, 160, 149);
+}
+
 @media (min-width: 600px) {
   /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-.illustration-sign-up-mobile {
-  display: none;
-  width: 100%;
-  height: auto; /* preserves aspect ratio */
-}
-.illustration-sign-up-tablet {
-  display: block;
+  .illustration-sign-up-mobile {
+    display: none;
+  }
+  .illustration-sign-up-tablet {
+    display: block;
+  }
+
+  .illustration-sign-up-desktop {
+    display: none;
+  }
+
+  #top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+  }
 }
 
-.illustration-sign-up-desktop {
-  display: none;
-}
+@media (min-width: 800px) {
+  /* wider screens*/
 
-#top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 35px;
-}
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
+  .illustration-sign-up-mobile {
+    display: none;
+  }
+  .illustration-sign-up-tablet {
+    display: none;
+  }
+
+  .illustration-sign-up-desktop {
+    display: block;
+    width: 100%;
+  }
+
+  #container {
+    transform: scale(0.6);
+    border-radius: 36px;
+  }
+
+  #form {
+    display: flex;
+  }
+
+  #top {
+    order: 2;
+    padding-left: 0;
+  }
+
+  #bottom {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 25px;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  #success-message {
+    border-radius: 36px;
+    max-width: 26rem;
+    padding: 48px;
+  }
+
+  #success-message > p {
+    margin-bottom: 16px;
+  }
 }
